@@ -14,21 +14,26 @@
     @include('include.header')
 
       <section class="account-container">
-    
+
         <div class="flex-column-container">
-            
+
             <div class="profile-container">
-                <img src="./assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+                @php
+                $user = Auth::user();
+                @endphp
+                <img src="{{ $user->profile_picture ? asset('storage/' . $user->profile_picture) : 'https://t4.ftcdn.net/jpg/02/15/84/43/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg' }}" alt="Profile Picture" class="profile-pic">
                 <div class="profile-text">
-                    <h1>{{auth()->user()->name}}</h1>
-                    <p>{{auth()->user()->email}}</p>
+                    @if ($user)
+                    <h1>{{$user->name}}</h1>
+                    <p>{{$user->email}}</p>
+                    @endif
                     <a href="{{url('/membership')}}"><button class="membership-btn">Membership</button></a>
                     <a href="{{route('editprofile')}}"> <button class="editprofile">Edit Profile</button></a>
                     <a href="{{route('logout')}}"> <button class="logout">Logout</button></a>
                 </div>
             </div>
-    
-            
+
+
             <section class="membership-promo">
               <h2>Become a Member</h2>
               <div class="slideshow-container">
@@ -45,7 +50,7 @@
                   <a class="next" onclick="changeSlide(1)">&#10095;</a>
               </div>
           </section>
-          
+
           <div class="membership-info">
               <h1>Here's what's included in membership:</h1>
               <ul>

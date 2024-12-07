@@ -17,12 +17,13 @@
 nav {
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 5px;
     background-color: #004530;
     position: fixed;
     color: white;
     filter: drop-shadow(0 0 0.7em #000000);
     z-index: 10;
+    top: 0;
 }
 
 .navbar-container {
@@ -150,7 +151,7 @@ nav {
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -170,25 +171,47 @@ p {
 
 .post1 {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
-    padding: 10px;
+    padding: 30px;
     width: auto;
     max-width: 800px;
     position: relative;
+    top: 130px;
+}
+
+.input-text textarea{
+    border-style: none;
+    width: auto;
+    height: auto;
+    width: 100%;
+}
+
+.input-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .post2 {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 30px;
     width: auto;
     max-width: 800px;
     position: relative;
+    top: 160px;
+}
 
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    margin-left: auto;
 }
 
 .reply-crown {
@@ -202,13 +225,14 @@ p {
 
 .post3 {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 40px auto;
-    padding: 10px;
+    padding: 30px;
     width: auto;
     max-width: 800px;
     position: relative;
+    top: 160px;
 }
 
 .time, h3 {

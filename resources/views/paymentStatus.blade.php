@@ -45,7 +45,7 @@
             <script>
                 document.getElementById("check-button").addEventListener("click", function(event) {
                     event.preventDefault();
-                    window.location.href = "invoice.html";
+                    window.location.href = "{{url('/invoice')}}";
                 });
             </script>            
         </div>

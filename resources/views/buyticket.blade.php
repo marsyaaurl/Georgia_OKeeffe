@@ -20,7 +20,7 @@
     <script src="{{asset('js/buyticket.js')}}" defer></script>
   </head>
   <body>
-    @include('include.header')  
+    @include('include.header')
 
     <div class="ticket">
       <h1>Georgia O’Keeffe: Making a Life</h1>
@@ -45,7 +45,9 @@
         </div>
       </div>
       <div class="ticket-form">
-        <form action="{{url('/paymentMethod')}}" method="GET">
+        <form action="{{ route('buyticket.post') }}" method="POST">
+            @csrf
+            @method('post')
           <label>Name</label>
           <input
             type="text"
@@ -64,18 +66,11 @@
             required
           />
 
-          <label>Date of Birth</label>
-          <input type="date" id="dob" name="dob" required />
-
           <label for="date">Select Date</label>
-          <select id="date" name="date">
-            <option value="28/11/2024">28/11/2024</option>
-            <option value="30/11/2024">30/11/2024</option>
-            <option value="2/12/2024">2/12/2024</option>
-          </select>
+          <input type="date" name="selectDate" placeholder="Select Date" required/>
 
           <label for="time">Select Time</label>
-          <select id="time" name="time">
+          <select id="time" name="selectTime">
             <option value="10.30 AM - 12.00 PM">10.30 AM - 12.00 PM</option>
             <option value="12.30 PM - 02.00 PM">12.30 PM - 02.00 PM</option>
             <option value="02.30 PM - 04.00 PM">02.30 PM - 04.00 PM</option>
@@ -111,19 +106,29 @@
             <option value="Infant">Infant</option>
           </select>
 
+          <label for="paymentMethod">Payment Method</label>
+            <select id="method" name="paymentMethod" required>
+                <option value="" disabled selected>
+                    Select a method
+                </option>
+                <option value="bank">BCA Virtual Account</option>
+                <option value="gopay">GoPay</option>
+                <option value="shopeepay">ShopeePay</option>
+            </select>
+
           <label for="ticket-quantity"><h4>Quantity</h4></label>
           <div class="input-group">
             <button type="button" id="minus">-</button>
-            <input type="number" id="ticket-quantity" value="1" />
+            <input type="number" id="ticket-quantity" value="1" name="quantity"/>
             <button type="button" id="plus">+</button>
           </div>
 
           <div class="total-container">
-            <span class="total-label">Total</span>
-            <span id="total-amount">$22.00</span>
+            <label for="total-amount" class="total-label">Total</label>
+            <input type="text" name="totalPrice" id="total-amount" value="50" readonly />
           </div>
 
-          <input type="submit" class="checkout" name="checkout" value="checkout">
+          <input type="submit" class="checkout" name="checkout" value="Checkout">
         </form>
       </div>
     </div>

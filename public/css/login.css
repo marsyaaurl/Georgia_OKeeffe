@@ -21,13 +21,13 @@ body {
 nav {
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 5px;
     background-color: #004530;
     position: fixed;
     color: white;
     filter: drop-shadow(0 0 0.7em #000000);
     z-index: 10;
-    top: 0; /* Pastikan navbar tetap di atas */
+    top: 0;
 }
 
 .navbar-container {

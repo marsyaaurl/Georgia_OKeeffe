@@ -14,7 +14,9 @@
 
     <div class="post1">
     <h2 class="uname">Quyun<span class="crown-icon"><img src="./assets/bronzecrown.png" alt="Bronze Crown"></span></h2>
-        <p>Got a story about Georgia O’Keeffe? Let us hear it!</p>
+        <div class="input-text">
+            <textarea type="text" placeholder="Got a story about Georgia O’Keeffe? Let us hear it!" name=""></textarea>
+        </div>
         <button class="image-button"><img src="./assets/addimg.png" alt="Post Image" class="post-image"></button>
         <div class="post-button">
         <button class="post-button" alt="Post Comment">Post</button>
@@ -26,9 +28,11 @@
         <span class="time">5m ago</span>
         
         <p>I’m excited for the new exhibition! Any tips for the first timer?</p>
-        <button class="comment-button"><a href="{{url('/detailpost2')}}"><img src="./assets/comment.png" alt="Comment" class="post-comment"></a></button>
-        <button class="edit-button"><img src="./assets/edit.png" alt="Edit" class="edit-post"></button>
-        <button class="delete-button"><img src="./assets/delete.png" alt="Delete" class="delete-post"></button>
+        <div class="buttons">
+            <button class="comment-button"><a href="{{url('/detailpost2')}}"><img src="./assets/comment.png" alt="Comment" class="post-comment"></a></button>
+            <button class="edit-button"><img src="./assets/edit.png" alt="Edit" class="edit-post"></button>
+            <button class="delete-button"><img src="./assets/delete.png" alt="Delete" class="delete-post"></button>
+        </div>
         <div class="reply">
         <h3>Reza<img src="./assets/goldcrown.png" alt="Bronze Crown" class="crown-icon"></h3>
         <span class="time">1s ago</span>

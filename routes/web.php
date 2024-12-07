@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
@@ -26,6 +26,11 @@ Route::get('/account-nonlogin', function(){
 Route::get('/account', function(){
     return view('account');
 })->name('account');
+
+Route::get('/buyticket', [AuthController::class, 'buyticket'])->name('buyticket');
+Route::post('/buyticket', [AuthController::class, 'buyticketPost'])->name('buyticket.post');
+Route::get('/invoice1/{id}', [AuthController::class, 'invoice1'])->name('invoice.1');
+
 
 Route::get('/artwork', function(){
     return view('artwork');
@@ -64,14 +69,9 @@ Route::get('/blue', function(){
 })->name('blue');
 
 
-
 Route::get('/bio', function(){
     return view('bio');
 })->name('bio');
-
-Route::get('/buyticket', function(){
-    return view('buyticket');
-})->name('buyticket');
 
 Route::get('/buyticket2', function(){
     return view('buyticket2');

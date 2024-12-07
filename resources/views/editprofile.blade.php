@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <title>Georgia O'Keeffe Community</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{{asset('css/editprofile.css')}}" />
-  </head>
+    <link rel="stylesheet" href="{{asset('css/editprofile.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+</head>
   <body>
+    @include('include.header')
     <div class="edit-profile">
       <h1>Edit Profile</h1>
 
@@ -28,12 +32,12 @@
 
           <div class="input-group">
             <label for="name">Name</label>
-            <input type="name" id="name" class="name" value="" />
+            <input type="name" id="name" class="name" value={{auth()->user()->name}} />
           </div>
 
           <div class="input-group">
             <label for="email">Email</label>
-            <input type="email" class="email" value="" />
+            <input type="email" class="email" value={{auth()->user()->email}} />
           </div>
 
           <div class="input-group">

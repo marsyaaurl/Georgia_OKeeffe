@@ -15,16 +15,17 @@
     filter: drop-shadow(0 0 0.7em #FFFFFF);
 }
 
-/*nav {
+nav {
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 5px;
     background-color: #004530;
     position: fixed;
     color: white;
     filter: drop-shadow(0 0 0.7em #000000);
     z-index: 10;
-}*/
+    top: 0;
+}
 
 .navbar-container {
     display: flex;
@@ -137,9 +138,9 @@
     transition: transform 0.3s ease; 
 }
 
-/*.dropdown:hover .dropdown-arrow {
+.dropdown:hover .dropdown-arrow {
     transform: rotate(180deg);
-}*/
+}
 
 .menu ul li a[href="account.html"] {
     color: #FFFFFF;
@@ -209,18 +210,6 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-nav {
-    width: 100%;
-    height: auto;
-    padding: 15px;
-    background-color: #004530;
-    position: fixed;
-    color: white;
-    filter: drop-shadow(0 0 0.7em #000000);
-    z-index: 10;
-    top: 0;
 }
 
 .membership-card {

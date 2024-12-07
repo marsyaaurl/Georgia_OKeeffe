@@ -25,7 +25,7 @@
                 <div class="exhibition-info">
                     <p>Current Exhibition</p><p class="date">December 8, 2022 - November 2, 2025</p>
                     <h2>Georgia O'Keeffe: Making a Life</h2>
-                    <p><img src="./assets/location.png" alt="location icon" class="location-icon"> Santa FE,NM  Georgia O'Keeffe Museum</p>
+                    <p><img src="./assets/location.jpg" alt="location icon" class="location-icon"> Santa FE,NM  Georgia O'Keeffe Museum</p>
                     <br>
                     <p style="font-size: 15px;">Georgia O'Keeffe: Making a Life explores the artist's identity as a "Maker" – an individual who carefully curated her life, personal style and artistic practice. This exhibition showcases art and objects from the Museum's collection that exemplify O'Keeffe's way of living and creating, including books, furniture, artist's materials, clothing and accessories. Visitors will be invited to learn more about the art and life of Georgia O'Keeffe, and the wide-ranging scope of the Museum's collections.</p>
                
@@ -43,7 +43,7 @@
                 <div class="exhibition-info">
                     <p>Current Exhibition</p><p class="date">December 8, 2022 - November 2, 2025</p>
                     <h2>Rooted in Place</h2>
-                    <p><img src="./assets/location.png" alt="location icon" class="location-icon"> Santa FE,NM  Georgia O'Keeffe Museum</p>
+                    <p><img src="./assets/location.jpg" alt="location icon" class="location-icon"> Santa FE,NM  Georgia O'Keeffe Museum</p>
                     <br>
                     <p style="font-size: 15px;">Many of us are familiar with Georgia O'Keeffe's explorations of flowers; however, an even more persistent botanical subject in her work was trees. Throughout her life, O'Keeffe returned over and over to depictions and descriptions of trees in paintings, sketches, watercolors, and even in her letters. She captured trees in drawings and paintings from her travels around the world and from the places she made home.</p>
                     
@@ -62,7 +62,7 @@
                 <div class="exhibition-info">
                     <p>Upcoming Exhibition</p><p class="date">December 7, 2024 - October 31, 2025</p>
                     <h2>A Circle that Nothing Can Break</h2>
-                    <p><img src="./assets/location.png" alt="location icon" class="location-icon"> Santa FE,NM  Georgia O'Keeffe Museum</p>
+                    <p><img src="./assets/location.jpg" alt="location icon" class="location-icon"> Santa FE,NM  Georgia O'Keeffe Museum</p>
                     <br>
                     <p style="font-size: 15px;">A Circle that Nothing Can Break explores how Georgia O’Keeffe imbued shapes—the circle in particular—with emotional symbolism and abstract ideas. Circles and spirals appeared repeatedly in O’Keeffe’s drawings of the 1910s; however, the motif all but disappeared from her work in 1946. In the 1970s, near the close of her career, she returned to the theme. Including works never exhibited during her lifetime, this exhibition delves into a vitally significant theme in her life and artistic career.</p>
                

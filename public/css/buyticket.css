@@ -16,7 +16,7 @@
 nav {
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 5px;
     background-color: #004530;
     position: fixed;
     color: white;
@@ -163,8 +163,8 @@ nav {
 .ticket h1 {
     position: relative;
     align-items: start;
-    top: 80px;
-    left: 50px;
+    top: 120px;
+    left: 100px;
 }
 
 .exhib-info {
@@ -174,17 +174,19 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 80px;
-    left: 0;
+    top: 140px;
+    left: 50px;
     padding-right: 30px;
     gap: 40px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 150px;
 }
 
 .exhib-info img {
     margin-right: 0;
     margin-left: 50px;
+    border-radius: 10px;
+    width: 400px;
 }
 
 .ticket-form {
@@ -197,7 +199,7 @@ form {
     border-radius: 20px;
     padding: 40px;
     width: 68%;
-    margin: 0 auto;
+    margin: 0px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -215,7 +217,7 @@ form select {
     margin-bottom: 15px;
     border-radius: 5px;
     box-sizing: border-box;
-    border-color: black;
+    border-color: rgba(0, 0, 0, 0.5);
     border-width: 0.5px;
 }
 

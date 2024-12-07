@@ -1,6 +1,6 @@
 body {
     font-family: Inter;
-    background-color: #EFF5E9;
+    background-color: white;
     margin: 0;
     height: 100%;
     display: flex;
@@ -28,7 +28,7 @@ a {
     nav {
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 5px;
     background-color: #004530;
     position: fixed;
     color: white;
@@ -160,9 +160,9 @@ a {
         transition: transform 0.3s ease; 
     }
     
-    /*.dropdown:hover .dropdown-arrow {
+    .dropdown:hover .dropdown-arrow {
         transform: rotate(180deg);
-    }*/
+    }
     
     .menu ul li a[href="account.html"] {
         color: #FFFFFF;
@@ -191,22 +191,24 @@ a {
 }
 
 .tabs a {
+    margin-top: 15px;
     padding: 10px 20px;
     text-decoration: none;
-    color: black;
+    color: #004530;
     font-weight: bold;
     border-bottom: 3px solid transparent;
     cursor: pointer;
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: Amiri;
 }
 
 .tabs a.active {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #004530;
 }
 
 .exhibition-card {
-    background-color: #EFF5E9;
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -214,11 +216,13 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .exhibition-card img {
     border-radius: 10px;
     max-width: 400px;
+    height: auto;
 }
 
 .exhibition-info {
