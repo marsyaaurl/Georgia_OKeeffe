@@ -266,19 +266,26 @@ input[readonly] {
 }
 
 .total-container {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #333;
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px;
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    border-top: 1px solid #ccc;
+    margin-top: 20px; 
+    gap: 20px;
+    background-color: white;
+  }
+  
+  .total-label {
+    color: #000; 
+  }
 
-.total-label {
-    font-weight: bold;
-    color: #000;
-}
-
-#total-amount {
+  .total-container input {
+    text-align: right;
     color: #004530;
-    font-weight: bold;
-}
+    font-weight: 700;
+    border-style: none;
+    font-size: 1.2rem;
+  }

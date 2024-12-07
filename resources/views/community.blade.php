@@ -26,7 +26,7 @@
     <div class="post2">
         <h2 class="uname">Quyun<span class="crown-icon"><img src="./assets/bronzecrown.png" alt="Bronze Crown"></span></h2>
         <span class="time">5m ago</span>
-        
+
         <p>I’m excited for the new exhibition! Any tips for the first timer?</p>
         <div class="buttons">
             <button class="comment-button"><a href="{{url('/detailpost2')}}"><img src="./assets/comment.png" alt="Comment" class="post-comment"></a></button>
@@ -50,8 +50,8 @@
         <div class="reply">
             <div class="reply1">
                 <h3 class="uname">Marsya<span class="reply-crown"><img src="./assets/silvercrown.png" alt="Silver Crown"></span></h3><span class="time">7m ago</span>
-                <p>For me, it’s Blue #2! 
-                The intense blue color suggests that she may have been familiar with Wassily Kandinsky's notion that 
+                <p>For me, it’s Blue #2!
+                The intense blue color suggests that she may have been familiar with Wassily Kandinsky's notion that
                 visual art, like music, should convey emotion through the use of color and line.</p>
                 <img src="./assets/comphoto2.png" class="thumbnail">
             </div>

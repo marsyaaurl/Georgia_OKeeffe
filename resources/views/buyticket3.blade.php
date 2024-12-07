@@ -31,12 +31,12 @@
           <img src="" alt="" />
           <h3><b>Santa Fe, NM, </b><span> Georgia O'Keeffe Museum</span></h3>
           <p>
-            A Circle that Nothing Can Break explores how Georgia O’Keeffe imbued shapes—the 
-            circle in particular—with emotional symbolism and abstract ideas. Circles and 
-            spirals appeared repeatedly in O’Keeffe’s drawings of the 1910s; however, the 
-            motif all but disappeared from her work in 1946. In the 1970s, near the close 
-            of her career, she returned to the theme. Including works never exhibited during 
-            her lifetime, this exhibition delves into a vitally significant theme in her life 
+            A Circle that Nothing Can Break explores how Georgia O’Keeffe imbued shapes—the
+            circle in particular—with emotional symbolism and abstract ideas. Circles and
+            spirals appeared repeatedly in O’Keeffe’s drawings of the 1910s; however, the
+            motif all but disappeared from her work in 1946. In the 1970s, near the close
+            of her career, she returned to the theme. Including works never exhibited during
+            her lifetime, this exhibition delves into a vitally significant theme in her life
             and artistic career.
           </p>
           <br />
@@ -44,7 +44,9 @@
         </div>
       </div>
       <div class="ticket-form">
-        <form action="{{url('/paymentMethod3')}}" method="GET">
+        <form action="{{ route('buyticket3.post') }}" method="POST">
+          @csrf
+          @method('post')
           <label>Name</label>
           <input
             type="text"
@@ -63,18 +65,11 @@
             required
           />
 
-          <label>Date of Birth</label>
-          <input type="date" id="dob" name="dob" required />
-
           <label for="date">Select Date</label>
-          <select id="date" name="date">
-            <option value="28/11/2024">28/11/2024</option>
-            <option value="30/11/2024">30/11/2024</option>
-            <option value="2/12/2024">2/12/2024</option>
-          </select>
+          <input type="date" name="selectDate" placeholder="Select Date" required/>
 
           <label for="time">Select Time</label>
-          <select id="time" name="time">
+          <select id="time" name="selectTime">
             <option value="10.30 AM - 12.00 PM">10.30 AM - 12.00 PM</option>
             <option value="12.30 PM - 02.00 PM">12.30 PM - 02.00 PM</option>
             <option value="02.30 PM - 04.00 PM">02.30 PM - 04.00 PM</option>
@@ -110,19 +105,29 @@
             <option value="Infant">Infant</option>
           </select>
 
+          <label for="paymentMethod">Payment Method</label>
+            <select id="method" name="paymentMethod" required>
+                <option value="" disabled selected>
+                    Select a method
+                </option>
+                <option value="bank">BCA Virtual Account</option>
+                <option value="gopay">GoPay</option>
+                <option value="shopeepay">ShopeePay</option>
+            </select>
+
           <label for="ticket-quantity"><h4>Quantity</h4></label>
           <div class="input-group">
             <button type="button" id="minus">-</button>
-            <input type="number" id="ticket-quantity" value="1" />
+            <input type="number" id="ticket-quantity" value="1" name="quantity"/>
             <button type="button" id="plus">+</button>
           </div>
 
           <div class="total-container">
-            <span class="total-label">Total</span>
-            <span id="total-amount">$22.00</span>
+            <label for="total-amount" class="total-label">Total</label>
+            <input type="text" name="totalPrice" id="total-amount" value="50" readonly />
           </div>
 
-          <input type="submit" class="checkout" name="checkout" value="checkout">
+          <input type="submit" class="checkout" name="checkout" value="Checkout">
         </form>
       </div>
     </div>

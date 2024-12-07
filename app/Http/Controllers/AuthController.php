@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\exhib1;
+use App\Models\exhib2;
+use App\Models\exhib3;
+use App\Models\store1;
+use App\Models\store2;
+use App\Models\store3;
+use App\Models\store4;
+use App\Models\store5;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -96,6 +103,169 @@ class AuthController extends Controller
     {
     $ticket = Exhib1::findOrFail($id);
     return view('invoice', compact('ticket'));
+    }
+
+    public function invoice2($id)
+    {
+    $ticket = Exhib2::findOrFail($id);
+    return view('invoice2', compact('ticket'));
+    }
+
+    public function buyticket3(){
+        return view('buyticket3');
+    }
+
+    public function buyticket3Post(Request $request){
+       $data =  $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'selectDate' => 'required|date',
+            'selectTime' => 'required|string',
+            'category' => 'required|string|max:255',
+            'paymentMethod' => 'required|string|max:255',
+            'quantity' => 'required|integer|min:1',
+            'totalPrice' => 'required|integer|min:0',
+        ]);
+
+        $newTicket = exhib3::create($data);
+
+        return redirect()->route('invoice.3', $newTicket->id)->with('success', 'Ticket purchased successfully!');
+    }
+
+    public function invoice3($id)
+    {
+    $ticket = Exhib2::findOrFail($id);
+    return view('invoice3', compact('ticket'));
+    }
+
+    public function form(){
+        return view('form');
+    }
+
+    public function formPost(Request $request){
+       $data =  $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phoneNumber' => 'required|string',
+            'address' => 'required|string',
+            'quantity' => 'required|integer',
+            'totalPrice' => 'required|integer',
+            'paymentMethod' => 'required|string',
+        ]);
+
+        $newTicket = store1::create($data);
+
+        return redirect()->route('invoice.4', $newTicket->id)->with('success', 'Merchandise purchased successfully!');
+    }
+
+    public function invoice4($id)
+    {
+    $merchandise = Store1::findOrFail($id);
+    return view('invoice4', compact('merchandise'));
+    }
+
+    public function form2(){
+        return view('form2');
+    }
+
+    public function form2Post(Request $request){
+       $data =  $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phoneNumber' => 'required|string',
+            'address' => 'required|string',
+            'quantity' => 'required|integer',
+            'totalPrice' => 'required|integer',
+            'paymentMethod' => 'required|string',
+        ]);
+
+        $newTicket = store2::create($data);
+
+        return redirect()->route('invoice.5', $newTicket->id)->with('success', 'Merchandise purchased successfully!');
+    }
+
+    public function invoice5($id)
+    {
+    $merchandise = Store2::findOrFail($id);
+    return view('invoice5', compact('merchandise'));
+    }
+
+    public function form3(){
+        return view('form3');
+    }
+
+    public function form3Post(Request $request){
+       $data =  $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phoneNumber' => 'required|string',
+            'address' => 'required|string',
+            'quantity' => 'required|integer',
+            'totalPrice' => 'required|integer',
+            'paymentMethod' => 'required|string',
+        ]);
+
+        $newTicket = store3::create($data);
+
+        return redirect()->route('invoice.6', $newTicket->id)->with('success', 'Merchandise purchased successfully!');
+    }
+
+    public function invoice6($id)
+    {
+    $merchandise = Store3::findOrFail($id);
+    return view('invoice6', compact('merchandise'));
+    }
+
+    public function form4(){
+        return view('form4');
+    }
+
+    public function form4Post(Request $request){
+       $data =  $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phoneNumber' => 'required|string',
+            'address' => 'required|string',
+            'quantity' => 'required|integer',
+            'totalPrice' => 'required|integer',
+            'paymentMethod' => 'required|string',
+        ]);
+
+        $newTicket = store4::create($data);
+
+        return redirect()->route('invoice.7', $newTicket->id)->with('success', 'Merchandise purchased successfully!');
+    }
+
+    public function invoice7($id)
+    {
+    $merchandise = Store4::findOrFail($id);
+    return view('invoice7', compact('merchandise'));
+    }
+
+    public function form5(){
+        return view('form5');
+    }
+
+    public function form5Post(Request $request){
+       $data =  $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phoneNumber' => 'required|string',
+            'address' => 'required|string',
+            'quantity' => 'required|integer',
+            'totalPrice' => 'required|integer',
+            'paymentMethod' => 'required|string',
+        ]);
+
+        $newTicket = store5::create($data);
+
+        return redirect()->route('invoice.8', $newTicket->id)->with('success', 'Merchandise purchased successfully!');
+    }
+
+    public function invoice8($id)
+    {
+    $merchandise = Store5::findOrFail($id);
+    return view('invoice8', compact('merchandise'));
     }
 
 

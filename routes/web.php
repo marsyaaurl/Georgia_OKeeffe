@@ -34,6 +34,35 @@ Route::get('/buyticket', [AuthController::class, 'buyticket'])->name('buyticket'
 Route::post('/buyticket', [AuthController::class, 'buyticketPost'])->name('buyticket.post');
 Route::get('/invoice1/{id}', [AuthController::class, 'invoice1'])->name('invoice.1');
 
+Route::get('/buyticket2', [AuthController::class, 'buyticket2'])->name('buyticket2');
+Route::post('/buyticket2', [AuthController::class, 'buyticket2Post'])->name('buyticket2.post');
+Route::get('/invoice2/{id}', [AuthController::class, 'invoice2'])->name('invoice.2');
+
+Route::get('/buyticket3', [AuthController::class, 'buyticket3'])->name('buyticket3');
+Route::post('/buyticket3', [AuthController::class, 'buyticket3Post'])->name('buyticket3.post');
+Route::get('/invoice3/{id}', [AuthController::class, 'invoice3'])->name('invoice.3');
+
+Route::get('/form', [AuthController::class, 'form'])->name('form');
+Route::post('/form', [AuthController::class, 'formPost'])->name('form.post');
+Route::get('/invoice4/{id}', [AuthController::class, 'invoice4'])->name('invoice.4');
+
+Route::get('/form2', [AuthController::class, 'form2'])->name('form2');
+Route::post('/form2', [AuthController::class, 'form2Post'])->name('form2.post');
+Route::get('/invoice5/{id}', [AuthController::class, 'invoice5'])->name('invoice.5');
+
+Route::get('/form3', [AuthController::class, 'form3'])->name('form3');
+Route::post('/form3', [AuthController::class, 'form3Post'])->name('form3.post');
+Route::get('/invoice6/{id}', [AuthController::class, 'invoice6'])->name('invoice.6');
+
+Route::get('/form4', [AuthController::class, 'form4'])->name('form4');
+Route::post('/form4', [AuthController::class, 'form4Post'])->name('form4.post');
+Route::get('/invoice7/{id}', [AuthController::class, 'invoice7'])->name('invoice.7');
+
+Route::get('/form5', [AuthController::class, 'form5'])->name('form5');
+Route::post('/form5', [AuthController::class, 'form5Post'])->name('form5.post');
+Route::get('/invoice8/{id}', [AuthController::class, 'invoice8'])->name('invoice.8');
+
+
 
 Route::get('/artwork', function(){
     return view('artwork');

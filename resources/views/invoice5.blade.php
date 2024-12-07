@@ -14,50 +14,46 @@
 @include('include.header')
 
 <div class="title">
-    <h1>A Circle that Nothing Can Break</h1>
+    <h1>Tote Bag</h1>
     <br />
-    <p>Invoice Number<br /><b>{{ 'INV' . str_pad($ticket->id, 6, '0', STR_PAD_LEFT) }}</b></p>
+    <p>Invoice Number<br /><b>{{ 'INV' . str_pad($merchandise->id, 6, '0', STR_PAD_LEFT) }}</b></p>
 </div>
 
 <div class="invoice">
-    <h2>Ticket Payment</h2>
+    <h2>Merchandise Payment</h2>
     <hr>
     <table>
         <tr>
             <td class="payment-info">Invoice Number</td>
-            <td class="payment-info">{{ 'INV' . str_pad($ticket->id, 6, '0', STR_PAD_LEFT) }}</td>
+            <td class="payment-info">{{ 'INV' . str_pad($merchandise->id, 6, '0', STR_PAD_LEFT) }}</td>
         </tr>
         <tr>
             <td class="payment-info">In the name of</td>
-            <td class="payment-info">{{ $ticket->name }}</td>
+            <td class="payment-info">{{ $merchandise->name }}</td>
         </tr>
         <tr>
             <td class="payment-info">Email</td>
-            <td class="payment-info">{{ $ticket->email }}</td>
+            <td class="payment-info">{{ $merchandise->email }}</td>
         </tr>
         <tr>
             <td class="payment-info">Purchased on</td>
-            <td class="payment-info">{{ \Carbon\Carbon::parse($ticket->created_at)->format('F jS, Y') }}</td>
-        </tr>
-        <tr>
-            <td class="payment-info">Effective on</td>
-            <td class="payment-info">{{ \Carbon\Carbon::parse($ticket->selectDate)->format('F jS, Y') }}</td>
+            <td class="payment-info">{{ \Carbon\Carbon::parse($merchandise->created_at)->format('F jS, Y') }}</td>
         </tr>
     </table>
     <br />
 
     <table class="payment-detail">
         <tr>
-            <th>Event</th>
+            <th>Merchandise</th>
             <th>Qty</th>
             <th>Unit Price</th>
             <th>Amount</th>
         </tr>
         <tr>
-            <td>A Circle that Nothing Can Break</td>
-            <td>{{ $ticket->quantity }}</td>
-            <td>${{ number_format($ticket->totalPrice / $ticket->quantity, 2) }}</td>
-            <td>${{ number_format($ticket->totalPrice, 2) }}</td>
+            <td>Tote Bag</td>
+            <td>{{ $merchandise->quantity }}</td>
+            <td>${{ number_format($merchandise->totalPrice / $merchandise->quantity, 2) }}</td>
+            <td>${{ number_format($merchandise->totalPrice, 2) }}</td>
         </tr>
     </table>
     <br />
@@ -65,7 +61,7 @@
     <table class="subtotal">
         <tr>
             <td>Subtotal</td>
-            <td>${{ number_format($ticket->totalPrice, 2) }}</td>
+            <td>${{ number_format($merchandise->totalPrice, 2) }}</td>
         </tr>
         <tr>
             <td>Discount</td>
@@ -73,7 +69,7 @@
         </tr>
         <tr>
             <td>Total</td>
-            <td>${{ number_format($ticket->totalPrice, 2) }}</td>
+            <td>${{ number_format($merchandise->totalPrice, 2) }}</td>
         </tr>
     </table>
 </div>

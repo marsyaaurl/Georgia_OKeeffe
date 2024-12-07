@@ -17,7 +17,7 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Amiri"
         />
-        <link rel="stylesheet" href="{{asset('css/form3.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/form.css')}}" />
         <script src="{{asset('js/form.js')}}" defer></script>
     </head>
     <body>
@@ -25,7 +25,9 @@
 
         <div class="form-container">
             <h1>Purchase This Merch</h1>
-            <form id="ticketForm">
+            <form id="ticketForm" action="{{ route('form3.post') }}" method="POST">
+                @csrf
+                @method('post')
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input
@@ -51,7 +53,7 @@
                     <input
                         type="tel"
                         id="phone"
-                        name="phone"
+                        name="phoneNumber"
                         placeholder="Your phone number"
                         required
                     />
@@ -72,6 +74,7 @@
                         <button
                             type="button"
                             class="minus"
+                            id="minus"
                             aria-label="Decrease"
                         >
                             &minus;
@@ -79,6 +82,7 @@
                         <input
                             type="number"
                             id="quantity"
+                            name="quantity"
                             class="input-box"
                             value="1"
                             min="1"
@@ -87,6 +91,7 @@
                         <button
                             type="button"
                             class="plus"
+                            id="plus"
                             aria-label="Increase"
                         >
                             &plus;
@@ -94,14 +99,13 @@
                     </div>
                 </div>
                 <div class="total-container">
-                    <span class="total-label">Total</span>
-                    <span type="number" id="total-amount" data-price="7.00"
-                        >$7.00</span
-                    >
+                    <label for="total-amount" class="total-label">Total</label>
+                    <input type="text" name="totalPrice" id="total-amount" value="7" readonly />
                 </div>
+
                 <div class="form-group">
                     <label for="method">Payment Method</label>
-                    <select id="method" name="method" required>
+                    <select id="method" name="paymentMethod" required>
                         <option value="" disabled selected>
                             Select a method
                         </option>
