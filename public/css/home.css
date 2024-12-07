@@ -1,0 +1,390 @@
+* {
+    font-family: Inter;
+    margin: 0;
+}
+
+.logo {
+    width: 150px;
+    height: 75px;
+    margin-left: 25px;
+}
+
+.name1, .name2 {
+    font-family: Baloo Bhaijaan;
+}
+
+.name3 {
+    font-family: Amiri;
+}
+
+.mainlogo:hover {
+    filter: drop-shadow(0 0 0.7em #FFFFFF);
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #004530;
+    position: fixed;
+    color: white;
+    filter: drop-shadow(0 0 0.7em #000000);
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    transition: filter 0.3s ease;
+}
+
+.nav-icon:hover {
+    filter: brightness(1.2);
+}
+
+
+.menu {
+    margin-right: 100px;
+    font-weight: 500;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 50px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    position: relative; 
+    padding-bottom: 5px; 
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px; 
+    background-color: #FFFFFF;
+    border-radius: 5px; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+    transform-origin: left; 
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1); 
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    font-weight: bolder;
+    filter: drop-shadow(0 0 0.7em #FFFFFF);
+}
+
+.menu ul li a.active::after {
+    transform: scaleX(1); 
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004530;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 0.9em;
+    color: white; 
+    font-weight: 600;
+    background-color: #004530; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #DEE2D4;
+    color: #004530;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-arrow {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: top;
+    transition: transform 0.3s ease; 
+}
+
+.menu ul li a[href="account.html"] {
+    color: #FFFFFF;
+    
+}
+
+.menu ul li a[href="account.html"]:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.home-photo {
+    width: 100%;
+    height: auto;
+}
+
+.name1, .name2, .name3 {
+    position: absolute;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 40px;
+    text-align: center; 
+}
+
+.name1 {
+    top: 50%;
+    left: 75%;
+}
+
+.name2 {
+    top: 55.5%;
+    left: 71%;
+}
+
+.name3 {
+    left: 230%;
+}
+
+.painting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding: 10px;
+    transform: translateY(50px); 
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+}
+
+.painting-container.visible {
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+.painting-container button {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    background-color: #DEE2D4;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    font-size: 24px; 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%);
+    border: none;
+    color: #004530;
+}
+
+.painting-container button:hover {
+    background-color: white;
+}
+
+#prev-but {
+    left: 10px;
+}
+
+#next-but {
+    right: 10px; 
+}
+
+.famous-painting1, .famous-painting2 {
+    width: 200px; 
+    height: auto;
+    object-fit: contain;
+    border: #004530 solid 10px; 
+    margin: 0 20px; 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.famous-painting1:first-child, .famous-painting2:first-child {
+    margin-left: 20px; 
+}
+
+.famous-painting1:hover, .famous-painting2:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+.about-section {
+    margin: 120px;
+    transform: translateY(50px); 
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.about-section.visible {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+.about-photo {
+    max-width: 100%; 
+    height: auto;
+    margin-top: 20px;
+    margin-right: 40px;
+    float: left;
+    filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.5));
+}
+
+.about-section h2 {
+    font-family: Baloo Bhaijaan;
+    font-size: 30px;
+}
+
+.basic-info p {
+    background-color: #004530;
+    color: white;
+    display: inline;
+    padding: 3px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.detailed-info {
+    margin-top: 10px;
+}
+
+.quote {
+    align-items: center;
+    text-align: center;
+    background-color: #DEE2D4;
+    margin-top: 100px;
+    padding: 70px;
+    border-radius: 10px;
+}
+
+.quote-img {
+    margin: 20px;
+}
+
+blockquote {
+    font-size: 22px;
+    color: #004530;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #004530;
+    color: white;
+    padding: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-container h2 {
+    font-family: Baloo Bhaijaan;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 700px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        margin-right: 20px;
+    }
+
+    .menu ul li {
+        margin-left: 10px;
+    }
+
+    .name1 {
+        left: 75%; 
+        transform: translateY(-50%);
+        font-size: 30px; 
+    }
+
+    .name2 {
+        left: 74.5%; 
+        transform: translateY(-50%);
+        font-size: 30px;
+    }
+
+    .painting-container {
+        padding: 10px;
+    }
+
+    .famous-painting1, .famous-painting2 {
+        width: 100%;
+        max-width: 150px; 
+        margin: 10px;
+    }
+
+    .about-section {
+        margin: 20px;
+    }
+
+    .about-photo {
+        max-width: 100%; 
+        height: auto; 
+    }
+}

@@ -1,0 +1,291 @@
+body {
+    font-family: Inter;
+    background-color: #EFF5E9;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ticket-info a {
+    color: white;
+}
+
+.logo {
+    width: 150px;
+    height: 75px;
+    margin-left: 25px;
+}
+
+    .mainlogo:hover {
+    filter: drop-shadow(0 0 0.7em #ffffff);
+}
+
+    nav {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #004530;
+    position: fixed;
+    color: white;
+    filter: drop-shadow(0 0 0.7em #000000);
+    z-index: 10;
+    top: 0%;
+    }
+
+    .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .nav-icon {
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+        transition: filter 0.3s ease;
+    }
+    
+    .nav-icon:hover {
+        filter: brightness(1.2);
+    }
+    
+    .menu {
+    margin-right: 100px;
+    font-weight: 500;
+    }
+
+    .menu ul {
+    display: flex;
+    list-style: none;
+    }
+
+    .menu ul li {
+    margin-left: 50px;
+    }
+
+    .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
+    }
+
+    .menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+    }
+
+    .menu ul li a:hover::after {
+    transform: scaleX(1);
+    }
+
+    .menu ul li a:hover,
+    .menu ul li a.active {
+    font-weight: bolder;
+    filter: drop-shadow(0 0 0.7em #ffffff);
+    }
+
+    .menu ul li a.active::after {
+    transform: scaleX(1);
+    }
+
+    @media (max-width: 768px) {
+    .menu {
+        margin-right: 20px;
+    }
+
+    .menu ul li {
+        margin-left: 10px;
+    }
+    }
+
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #004530;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        margin-top: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    
+    .dropdown-content a {
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        font-size: 0.9em;
+        color: white; 
+        font-weight: 600;
+        background-color: #004530; 
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #DEE2D4;
+        color: #004530;
+    }
+    
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-arrow {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        vertical-align: top;
+        transition: transform 0.3s ease; 
+    }
+    
+    /*.dropdown:hover .dropdown-arrow {
+        transform: rotate(180deg);
+    }*/
+    
+    .menu ul li a[href="account.html"] {
+        color: #FFFFFF;
+        
+    }
+    
+    .menu ul li a[href="account.html"]:hover {
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .dropdown-content.show {
+        display: block;
+    }
+
+.container {
+    padding: 20px;
+    margin-top: 70px;
+    flex: 1;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.tabs a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.tabs a.active {
+    border-bottom: 3px solid black;
+}
+
+.exhibition-card {
+    background-color: #EFF5E9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.exhibition-card img {
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.exhibition-info {
+    max-width: 80%;
+    flex: 1;
+}
+
+.exhibition-info h2 {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.exhib-img-right {
+    width: 500px;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.exhibition-info p {
+    font-size: 20px;
+    margin: 0;
+    color: #555;
+}
+
+.exhibition-info .date {
+    font-style: italic;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.location-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.ticket-info {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.ticket-info p {
+    margin: 0;
+}
+
+.ticket-info button {
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ticket-info button:hover {
+    background-color: rgba(24, 7, 7, 0.395);
+    border-radius: 8px; 
+}
+
+.explore-exhibition {
+background-color: #4CAF50; 
+color: white;
+padding: 10px 25px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}

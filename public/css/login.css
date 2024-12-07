@@ -1,0 +1,250 @@
+* {
+    font-family: Inter;
+    margin: 0;
+}
+
+.logo {
+    width: 150px;
+    height: 75px;
+    margin-left: 25px;
+}
+
+.mainlogo:hover {
+    filter: drop-shadow(0 0 0.7em #ffffff);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #004530;
+    position: fixed;
+    color: white;
+    filter: drop-shadow(0 0 0.7em #000000);
+    z-index: 10;
+    top: 0; /* Pastikan navbar tetap di atas */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    transition: filter 0.3s ease;
+}
+
+.nav-icon:hover {
+    filter: brightness(1.2);
+}
+
+.menu {
+    margin-right: 100px;
+    font-weight: 500;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 50px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    font-weight: bolder;
+    filter: drop-shadow(0 0 0.7em #ffffff);
+}
+
+.menu ul li a.active::after {
+    transform: scaleX(1);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #004530;
+    font-weight: 600;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #dee2d4;
+    color: #004530;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-arrow {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+}
+
+/*.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}*/
+
+.menu ul li a[href="account.html"] {
+    color: #ffffff;
+}
+
+.menu ul li a[href="account.html"]:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.container .registration {
+    margin-top: 250px;
+}
+#check:checked ~ .registration {
+    display: block;
+}
+#check:checked ~ .login {
+    display: none;
+}
+#check {
+    display: none;
+}
+.container .form {
+    padding: 2rem;
+}
+.form header {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.form input {
+    height: 60px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    outline: none;
+}
+.form input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form a {
+    font-size: 16px;
+    color: #004530;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+.form input.button {
+    color: #fff;
+    background: #004530;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.form input.button:hover {
+    background: #357a52;
+}
+.signup {
+    font-size: 17px;
+    text-align: center;
+}
+.signup label {
+    color: #004530;
+    cursor: pointer;
+}
+.signup label:hover {
+    text-decoration: underline;
+}

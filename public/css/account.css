@@ -1,0 +1,370 @@
+* {
+    font-family: Inter;
+    margin: 0;
+}
+
+.logo {
+    width: 150px;
+    height: 75px;
+    margin-left: 25px;
+}
+
+.mainlogo:hover {
+    filter: drop-shadow(0 0 0.7em #ffffff);
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #004530;
+    position: fixed;
+    color: white;
+    filter: drop-shadow(0 0 0.7em #000000);
+    z-index: 10;
+    top: 0%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    transition: filter 0.3s ease;
+}
+
+.nav-icon:hover {
+    filter: brightness(1.2);
+}
+
+.menu {
+    margin-right: 100px;
+    font-weight: 500;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 50px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    font-weight: bolder;
+    filter: drop-shadow(0 0 0.7em #ffffff);
+}
+
+.menu ul li a.active::after {
+    transform: scaleX(1);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004530;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #dee2d4;
+    color: #004530;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-arrow {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+}
+
+/*.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }*/
+
+.menu ul li a[href="account.html"] {
+    color: #ffffff;
+}
+
+.menu ul li a[href="account.html"]:hover {
+    color: white;
+    font-weight: bolder;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------------------------------------------*/
+
+.account-container {
+    text-align: center;
+    padding: 30px;
+    margin: 0px;
+    max-width: 100%;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+    max-width: 80%;
+    margin: 0px;
+    margin-top: 70px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #004530;
+    object-fit: cover;
+    margin-right: 50px;
+}
+
+.profile-text {
+    text-align: left;
+    display: inline;
+    position: relative;
+}
+
+.profile-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004530;
+}
+
+.profile-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.membership-btn {
+    background-color: #004530;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.membership-btn:hover {
+    background-color: #026c46;
+}
+
+.logout {
+    background-color: #004530;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout:hover {
+    background-color: #004530;
+}
+
+.editprofile {
+    background-color: #004530;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.editprofile:hover {
+    background-color: #004530;
+}
+
+.flex-column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-container,
+.membership-info {
+    width: 100%;
+}
+
+.membership-info {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.membership-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    margin-top: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+}
+
+.h1 {
+    font-size: 50px;
+}
+
+.membership-promo {
+    text-align: left;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.price-btn {
+    background-color: white;
+    color: #004530;
+    padding: 10px 20px;
+    border: 2px solid #004530;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    float: right;
+    margin-top: 30px;
+}
+
+.price-btn:hover {
+    background-color: #004530;
+    color: white;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.3s;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
