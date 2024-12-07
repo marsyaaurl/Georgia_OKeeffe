@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
 {
@@ -21,6 +22,15 @@ class AuthController extends Controller
 
     function artwork(){
         return view('artwork');
+    }
+
+    function account(){
+        $user = user::all();
+        return view('account', ['users' => $user]);
+    }
+
+    public function edit(User $user){
+        return view('editprofile', ['user' => $user]);
     }
 
 
@@ -87,4 +97,49 @@ class AuthController extends Controller
     $ticket = Exhib1::findOrFail($id);
     return view('invoice', compact('ticket'));
     }
+
+
+    public function updateProfile(User $user, Request $request)
+    {
+    $data = $request->validate([
+        'input_picture' => 'image',
+        'name' => 'required',
+        'email' => 'required|email|unique:users,email,' . $user->id,
+    ]);
+
+    if ($request->hasFile('input_picture')) {
+        // Hapus gambar profil lama jika ada
+        if ($user->profile_picture) {
+            Storage::disk('public')->delete($user->profile_picture);
+        }
+
+        // Simpan gambar baru
+        $path = $request->file('input_picture')->store('profile_pictures', 'public');
+        $data['profile_picture'] = $path;
+    }
+
+    $user->update($data);
+
+    return redirect(route('account'))->with('success', 'Profile updated successfully.');
+    }
+
+    public function updatePassword(User $user, Request $request)
+    {
+    $data = $request->validate([
+        'password' => 'required',
+        'new_password' => 'required|confirmed',
+    ]);
+
+
+    if (!Hash::check($data['password'], $user->password)) {
+        return back()->withErrors(['password' => 'The current password is incorrect.']);
+    }
+
+    $user->update([
+        'password' => bcrypt($data['new_password']),
+    ]);
+
+    return redirect(route('account'))->with('success', 'Password updated successfully.');
+    }
+
 }

@@ -28,7 +28,7 @@
                     <p>{{$user->email}}</p>
                     @endif
                     <a href="{{url('/membership')}}"><button class="membership-btn">Membership</button></a>
-                    <a href="{{route('editprofile')}}"> <button class="editprofile">Edit Profile</button></a>
+                    <a href="{{route('edit.user', ['user' => $user])}}"> <button class="editprofile">Edit Profile</button></a>
                     <a href="{{route('logout')}}"> <button class="logout">Logout</button></a>
                 </div>
             </div>

@@ -23,9 +23,12 @@ Route::get('/account-nonlogin', function(){
     return view('account-nonlogin');
 });
 
-Route::get('/account', function(){
-    return view('account');
-})->name('account');
+
+Route::get('/account', [AuthController::class, 'account'])->name('account');
+
+Route::get('/user/{user}/edit', [AuthController::class, 'edit'])->name('edit.user');
+Route::put('/user/{user}/update', [AuthController::class, 'updateProfile'])->name('update.user');
+Route::put('/user/{user}/updatepassword', [AuthController::class, 'updatePassword'])->name('update.password');
 
 Route::get('/buyticket', [AuthController::class, 'buyticket'])->name('buyticket');
 Route::post('/buyticket', [AuthController::class, 'buyticketPost'])->name('buyticket.post');

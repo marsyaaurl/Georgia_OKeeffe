@@ -2,9 +2,9 @@ body {
     margin: 0;
     font-family: Inter;
     background-color: white;
-  }
+}
 
-*{
+* {
     font-family: Inter;
     margin: 0;
 }
@@ -28,7 +28,6 @@ nav {
     color: white;
     filter: drop-shadow(0 0 0.7em #000000);
     z-index: 10;
-    
 }
 
 .navbar-container {
@@ -156,11 +155,11 @@ nav {
 }
 
 .edit-profile {
-  margin: auto;
-  top: 120px;
+    margin: auto;
+    top: 120px;
 }
-  
-  .form-editprofile {
+
+.form-editprofile {
     width: 50%;
     margin: auto;
     background: white;
@@ -168,64 +167,65 @@ nav {
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     top: 160px;
-  }
-  
-  h1 {
+    margin-bottom: 50px;
+}
+
+h1 {
     text-align: center;
     color: #333;
-  }
-  
-  .picture {
+}
+
+.picture {
     align-items: center;
     background-color: #006837;
-  }
-  
-  .profile-picture {
+}
+
+.profile-picture {
     display: block;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 15px;
-  }
-  
-  .ipicture {
+}
+
+.ipicture {
     display: flex;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background: #ccc;
     margin: 0 auto;
-  }
-  
-  .edit-photo {
+}
+
+.edit-photo {
     display: flex;
     margin-top: 10px;
     color: #004225;
-  }
-  
-  form label {
+}
+
+form label {
     display: block;
     margin-bottom: 8px;
     color: black;
     font-weight: bold;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     margin-bottom: 15px;
-  }
-  
-  .name,
-  .email,
-  .password,
-  .confirm-password {
+}
+
+.name,
+.email,
+.password,
+.confirm-password {
     width: 95%;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-bottom: 3px;
-  }
-  
-  .save-profile {
+}
+
+.save-profile {
     display: block;
     margin-left: auto;
     margin-right: 0;
@@ -236,5 +236,4 @@ nav {
     padding: 10px;
     font-size: 16px;
     border-radius: 10px;
-  }
-  
+}

@@ -4,7 +4,7 @@
 <nav>
         <div class="navbar-container">
             <div class="logo">
-            <img src="./assets/Logo.png" alt="Georgia O'Keeffe" class="logo" title="Georgia O'Keeffe">
+            <img src="{{asset('assets/Logo.png')}}" alt="Georgia O'Keeffe" class="logo" title="Georgia O'Keeffe">
             </div>
             <div class="menu">
                 <ul>
