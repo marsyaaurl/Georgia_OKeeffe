@@ -12,7 +12,7 @@
   </head>
   <body>
     @include('include.header')
-    < class="edit-profile">
+    <div class="edit-profile">
       <h1>Edit Profile</h1>
 
         <div class="form-editprofile">
@@ -74,8 +74,6 @@
 
         <button type="submit" class="save-profile">Change Password</button>
         </form>
-    </div>
-
     </div>
   </body>
 </html>

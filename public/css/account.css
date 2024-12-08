@@ -22,7 +22,7 @@ nav {
     color: white;
     filter: drop-shadow(0 0 0.7em #000000);
     z-index: 10;
-    top: 0%;
+    top: 0;
 }
 
 .navbar-container {
@@ -166,8 +166,8 @@ nav {
 .account-container {
     text-align: center;
     padding: 30px;
-    margin: 0px;
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 50%;
 }
 
 .profile-container {
@@ -177,7 +177,7 @@ nav {
     padding: 0px;
     max-width: 80%;
     margin: 0px;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 .profile-pic {

@@ -1,239 +1,244 @@
 body {
-  margin: 0;
-  font-family: Inter;
-  background-color: white;
+    margin: 0;
+    font-family: Inter;
+    background-color: white;
 }
 
 * {
-  font-family: Inter;
-  margin: 0;
+    font-family: Inter;
+    margin: 0;
 }
 
 .logo {
-  width: 150px;
-  height: 75px;
-  margin-left: 25px;
+    width: 150px;
+    height: 75px;
+    margin-left: 25px;
 }
 
 .mainlogo:hover {
-  filter: drop-shadow(0 0 0.7em #ffffff);
+    filter: drop-shadow(0 0 0.7em #ffffff);
 }
 
 nav {
-  width: 100%;
-  height: auto;
-  padding: 5px;
-  background-color: #004530;
-  position: fixed;
-  color: white;
-  filter: drop-shadow(0 0 0.7em #000000);
-  z-index: 10;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: #004530;
+    position: fixed;
+    color: white;
+    filter: drop-shadow(0 0 0.7em #000000);
+    z-index: 10;
+    top: 0;
 }
 
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-icon {
-  width: 22px;
-  height: 22px;
-  vertical-align: middle;
-  transition: filter 0.3s ease;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    transition: filter 0.3s ease;
 }
 
 .nav-icon:hover {
-  filter: brightness(1.2);
+    filter: brightness(1.2);
 }
 
 .menu {
-  margin-right: 100px;
-  font-weight: 500;
+    margin-right: 100px;
+    font-weight: 500;
 }
 
 .menu ul {
-  display: flex;
-  list-style: none;
+    display: flex;
+    list-style: none;
 }
 
 .menu ul li {
-  margin-left: 50px;
+    margin-left: 50px;
 }
 
 .menu ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1em;
-  position: relative;
-  padding-bottom: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 .menu ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
 }
 
 .menu ul li a:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .menu ul li a:hover,
 .menu ul li a.active {
-  font-weight: bolder;
-  filter: drop-shadow(0 0 0.7em #ffffff);
+    font-weight: bolder;
+    filter: drop-shadow(0 0 0.7em #ffffff);
 }
 
 .menu ul li a.active::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .dropdown {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #004530;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 5;
-  margin-top: 5px;
-  border-radius: 5px;
-  overflow: hidden;
+    display: none;
+    position: absolute;
+    background-color: #004530;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .dropdown-content a {
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  font-size: 0.9em;
-  color: white;
-  font-weight: 600;
-  background-color: #004530;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 600;
+    background-color: #004530;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #dee2d4;
-  color: #004530;
+    background-color: #dee2d4;
+    color: #004530;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdown-arrow {
-  width: 15px;
-  height: 15px;
-  margin-left: 5px;
-  vertical-align: top;
-  transition: transform 0.3s ease;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: top;
+    transition: transform 0.3s ease;
 }
 
 .menu ul li a[href="account.html"] {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .menu ul li a[href="account.html"]:hover {
-  color: white;
-  font-weight: bolder;
+    color: white;
+    font-weight: bolder;
 }
 
 .dropdown-content.show {
-  display: block;
+    display: block;
 }
 
 .edit-profile {
-  margin: auto;
-  top: 120px;
+    margin: 0 auto;
+    top: 200px;
+    padding: 30px;
+    width: 50%;
 }
 
-.form-editprofile {
-  width: 50%;
-  margin: auto;
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  top: 160px;
-  margin-bottom: 50px;
+.edit-profile h1 {
+    margin-top: 100px;
+}
+
+.form-editprofile form {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
+    text-align: center;
+    color: #333;
 }
 
 .picture {
-  align-items: center;
-  background-color: #006837;
+    align-items: center;
+    background-color: #006837;
 }
 
 .profile-picture {
-  display: block;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 15px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .ipicture {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #ccc;
-  margin: 0 auto;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 auto;
+    top: 150px;
 }
 
 .edit-photo {
-  display: flex;
-  margin-top: 10px;
-  color: #004225;
+    display: flex;
+    margin-top: 10px;
+    color: #004225;
 }
 
 form label {
-  display: block;
-  margin-bottom: 8px;
-  color: black;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-weight: bold;
 }
 
 .input-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .name,
 .email,
 .password,
 .confirm-password {
-  width: 95%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 3px;
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 3px;
 }
 
 .save-profile {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-  width: 150px;
-  background-color: #004225;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 150px;
+    background-color: #004225;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
 }

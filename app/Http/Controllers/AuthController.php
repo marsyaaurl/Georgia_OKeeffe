@@ -105,11 +105,28 @@ class AuthController extends Controller
     return view('invoice', compact('ticket'));
     }
 
-    public function invoice2($id)
-    {
-    $ticket = Exhib2::findOrFail($id);
-    return view('invoice2', compact('ticket'));
-    }
+    public function buyticket2Post(Request $request){
+        $data =  $request->validate([
+             'name' => 'required',
+             'email' => 'required',
+             'selectDate' => 'required|date',
+             'selectTime' => 'required|string',
+             'category' => 'required|string|max:255',
+             'paymentMethod' => 'required|string|max:255',
+             'quantity' => 'required|integer|min:1',
+             'totalPrice' => 'required|integer|min:0',
+         ]);
+
+         $newTicket = exhib2::create($data);
+
+         return redirect()->route('invoice.2', $newTicket->id)->with('success', 'Ticket purchased successfully!');
+     }
+
+     public function invoice2($id)
+     {
+     $ticket = Exhib2::findOrFail($id);
+     return view('invoice2', compact('ticket'));
+     }
 
     public function buyticket3(){
         return view('buyticket3');

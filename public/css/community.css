@@ -1,5 +1,4 @@
-*
-{
+* {
     font-family: Inter;
     margin: 0;
 }
@@ -157,13 +156,13 @@ body {
 }
 
 .uname h2 {
-    font-family: 'Baloo Bhaijaan';
+    font-family: "Baloo Bhaijaan";
     font-size: 18px;
     margin: 0;
 }
 
 p {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 16px;
     line-height: 1.5;
     color: #333;
@@ -181,7 +180,7 @@ p {
     top: 130px;
 }
 
-.input-text textarea{
+.input-text textarea {
     border-style: none;
     width: auto;
     height: auto;
@@ -212,6 +211,8 @@ p {
     gap: 20px;
     align-items: flex-end;
     margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .reply-crown {
@@ -219,9 +220,10 @@ p {
     height: auto;
 }
 
-.time, h2 {
+.time,
+h2 {
     display: inline-block;
-  }
+}
 
 .post3 {
     background: white;
@@ -235,9 +237,10 @@ p {
     top: 160px;
 }
 
-.time, h3 {
+.time,
+h3 {
     display: inline-block;
-  }
+}
 
 .post1 .image-button {
     background: none;
@@ -259,6 +262,11 @@ p {
     align-items: right;
     justify-content: center;
     display: flex;
+}
+
+.comment-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .post3 .comment-button {
@@ -303,7 +311,7 @@ p {
 
 .post-button button:hover {
     background-color: rgba(24, 7, 7, 0.395);
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 .crown-icon {
@@ -347,7 +355,8 @@ p {
     margin-top: 10px;
 }
 
-.post2 .reply, .post3 .reply {
+.post2 .reply,
+.post3 .reply {
     margin-top: 10px;
 }
 
@@ -355,4 +364,3 @@ button {
     cursor: pointer;
     padding: 0;
 }
-
