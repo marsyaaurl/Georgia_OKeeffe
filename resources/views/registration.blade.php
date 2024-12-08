@@ -13,7 +13,7 @@
 <body>
    
     @include('include.header')
-    <div class="container">
+    <div class="container-regist">
         <input type="checkbox" id="check">
         <div class="registration form">
             <header>Sign Up</header>

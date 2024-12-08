@@ -24,7 +24,8 @@
 
         <div class="form-container">
             <h1>Purchase Membership</h1>
-            <form id="ticketForm">
+            <form id="ticketForm" action="{{ route('join-membership') }}" method="POST">
+                @csrf
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input

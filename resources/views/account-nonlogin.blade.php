@@ -50,7 +50,6 @@
                     <li>Discount up to 15%.</li>
                     <li>Become part of a community dedicated to celebrating Georgia O'Keeffe.</li>
                 </ul>
-                <a href="{{ url('/form2')}}"><button class="price-btn">$65 / 1 year</button></a>
             </div>
         </div>
 

@@ -40,7 +40,7 @@
             and artistic career.
           </p>
           <br />
-          <h2>$60 General Admission | $50 Museum Member</h2>
+          <h2>$50 General Admission</h2>
         </div>
       </div>
       <div class="ticket-form">

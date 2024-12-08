@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\MembershipController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,6 +20,21 @@ Route::post('/login',[AuthController::class, 'loginPost'])->name('login.post');
 Route::get('/registration', [AuthController::class, 'registration'])->name('registration');
 Route::post('/registration',[AuthController::class, 'registrationPost'])->name('registration.post');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth'])->group(function () {
+    Route::post('/join-membership', [MembershipController::class, 'joinMembership'])->name('join-membership');
+    Route::get('/account-member', function () {
+        return view('account-member');
+    })->name('account-member');
+});
+
+Route::get('/account-nonmember', function(){
+    return view('account-nonmember');
+})->name('account-nonmember');;
+
+Route::get('/account-member', function(){
+    return view('account-member');
+})->name('account-member');
 
 Route::get('/account-nonlogin', function(){
     return view('account-nonlogin');
@@ -200,3 +217,8 @@ Route::get('/detailpost2', function(){
 Route::get('/detailpost3', function(){
     return view('detailpost3');
 })->name('detailpost3');
+
+Route::get('/community', [CommentsController::class, 'index'])->name('comments.index');
+Route::post('/community', [CommentsController::class, 'store'])->name('comments.store');
+Route::put('/community/{id}', [CommentsController::class, 'update'])->name('comments.update');
+Route::delete('/community/{id}', [CommentsController::class, 'destroy'])->name('comments.destroy');

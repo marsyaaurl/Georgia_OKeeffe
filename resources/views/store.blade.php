@@ -27,7 +27,7 @@
                 <div class="product">
                     <img src="./assets/product1.png" alt="Product 1" />
                     <h3>Flower Painting Poster</h3>
-                    <p>$25.00 / $22.00 Member</p>
+                    <p>$25.00</p>
                     <a href="{{url('/form')}}"
                         ><button
                             class="buy-btn"
@@ -41,7 +41,7 @@
                 <div class="product">
                     <img src="./assets/product2.jpg" alt="Product 2" />
                     <h3>Tote Bag</h3>
-                    <p>$15.00 / $13.00 Member</p>
+                    <p>$15.00</p>
                     <a href="{{url('/form2')}}"
                         ><button
                             class="buy-btn"
@@ -55,7 +55,7 @@
                 <div class="product">
                     <img src="./assets/product3.png" alt="Product 3" />
                     <h3>Keychain</h3>
-                    <p>$7.00 / $5.00 Member</p>
+                    <p>$7.00</p>
                     <a href="{{url('/form3')}}"
                         ><button
                             class="buy-btn"
@@ -72,7 +72,7 @@
                 <div class="product">
                     <img src="./assets/product4.jpg" alt="Product 4" />
                     <h3>Art Mug</h3>
-                    <p>$18.00 / $16.00 Member</p>
+                    <p>$18.00</p>
                     <a href="{{url('/form4')}}"
                         ><button
                             class="buy-btn"
@@ -86,7 +86,7 @@
                 <div class="product">
                     <img src="./assets/product5.jpeg" alt="Product 5" />
                     <h3>Painting Book</h3>
-                    <p>$12.00 / $10.00 Member</p>
+                    <p>$12.00</p>
                     <a href="{{url('/form5')}}"
                         ><button
                             class="buy-btn"
