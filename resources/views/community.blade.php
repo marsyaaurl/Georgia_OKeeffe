@@ -31,41 +31,46 @@
 
 
     @foreach ($comments as $comment)
-    <div class="post2">
-        <h2 class="uname">{{ $comment->user_name }}</h2>
-        <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
-        <p>{{ $comment->reply }}</p>
-        <div class="buttons">
-            <!-- Tombol Edit -->
-            <button class="edit-button">
-                <a href="#" onclick="event.preventDefault(); document.getElementById('edit-form-{{ $comment->id }}').style.display = 'block';">
-                    <img src="./assets/edit.png" alt="Edit" class="edit-post">
-                </a>
-            </button>
+        <div class="post2">
+            <h2 class="uname">{{ $comment->user_name }}</h2>
+            <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
+            <p>{{ $comment->reply }}</p>
 
-            <!-- Tombol Delete -->
-            <form action="{{ route('comments.destroy', $comment->id) }}" method="POST" style="display:inline;">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="delete-button">
-                    <img src="./assets/delete.png" alt="Delete" class="delete-post">
-                </button>
-            </form>
-        </div>
+            @auth
+                @if (Auth::user()->name === $comment->user_name)
+                <div class="buttons">
+                    <!-- Tombol Edit -->
+                    <button class="edit-button">
+                        <a href="#" onclick="event.preventDefault(); document.getElementById('edit-form-{{ $comment->id }}').style.display = 'block';">
+                            <img src="./assets/edit.png" alt="Edit" class="edit-post">
+                        </a>
+                    </button>
 
-        <!-- Form Edit -->
-        <div id="edit-form-{{ $comment->id }}" style="display:none;">
-            <form action="{{ route('comments.update', $comment->id) }}" method="POST">
-                @csrf
-                @method('PUT')
-                <div class="input-text">
-                    <input type="text" name="user_name" value="{{ $comment->user_name }}" required>
-                    <textarea name="reply" required>{{ $comment->reply }}</textarea>
+                    <!-- Tombol Delete -->
+                    <form action="{{ route('comments.destroy', $comment->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="delete-button">
+                            <img src="./assets/delete.png" alt="Delete" class="delete-post">
+                        </button>
+                    </form>
                 </div>
-                <button type="submit" class="post-button">Update</button>
-            </form>
+
+                <!-- Form Edit -->
+                <div id="edit-form-{{ $comment->id }}" style="display:none;">
+                    <form action="{{ route('comments.update', $comment->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="input-text">
+                            <input type="text" name="user_name" value="{{ $comment->user_name }}" readonly>
+                            <textarea name="reply" required>{{ $comment->reply }}</textarea>
+                        </div>
+                        <button type="submit" class="post-button">Update</button>
+                    </form>
+                </div>
+                @endif
+            @endauth
         </div>
-    </div>
     @endforeach
 </body>
 </html>
